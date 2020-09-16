@@ -1,8 +1,11 @@
+source:
+  branch: master
 build_rules:
-  - id: rule-injection
+  - id: build-rule-identifier
+    finding_types:
+      - vuln
     severity:
-      - SEVERITY_MEDIUM_IMPACT
-      - SEVERITY_HIGH_IMPACT
+      - critical
     type:
       - SQL Injection
-    threshold: 10
+      - Sensitive Data Leak
